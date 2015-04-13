@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <Button
+            android:id="@+id/first_approach_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch Joke"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:onClick="fetchData"/>
+
+        <Button
+            android:id="@+id/volley_approach_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/first_approach_btn"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="Volley It!"
+            android:onClick="fetchData"/>
+
+        <Button
+            android:id="@+id/invalidate_cache_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invalidate cache"
+            android:layout_toRightOf="@id/volley_approach_btn"
+            android:onClick="invalidateCache"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/joke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press a button to get a Random joke"
+        android:onClick="invalidateCache"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pick file"
+        android:onClick="getFile"/>
+
+    <TextView
+        android:id="@+id/picked_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
